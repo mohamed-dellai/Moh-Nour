@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Id</th>
+                <th>Date d'inscription</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="e : ${etu}">
+                <td th:text="${e.nom}"></td>
+                <td th:text="${e.adresse}"></td>
+                <td th:text="${e.id}"></td>
+                <td th:text="${e.date.getYear()+1900}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/filtrer">Filtrer</a>
+</body>
+</html>
